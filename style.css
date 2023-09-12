@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --clr-dark-blue: #202733;
+    --clr-dark-grayish-blue: #313A48;
+    --clr-grayish-blue: #4F5D74;
+    --clr-light-cyan: #CEE3E9;
+    --clr-neon-green: #53FFAA;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background: var(--clr-dark-blue);
+    font-family: Manrope;
+    font-weight: 800;
+    min-height: 100vh;
+}
+
+main {
+    background: var(--clr-dark-grayish-blue);
+    place-content: center;
+    display: grid;
+    padding: 48px;
+    width: min(540px, 90%);
+    margin: auto;
+    position: relative;
+    border-radius: 15px;
+}
+
+@media (max-width: 540px) {
+    main {
+        padding: 40px 24px;
+        width: max(343px, 90%);
+        border-radius: 10px;
+    }
+}
+
+h1 {
+    color: var(--clr-neon-green);
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 24px;
+    letter-spacing: 4.09px;
+}
+
+h2 {
+    color: var(--clr-light-cyan);
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 540px) {
+    h1 {
+        font-size: 11px;
+        letter-spacing: 3.46px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+picture {
+    display: grid;
+    place-content: center;
+    margin-bottom: 24px;
+}
+
+picture img {
+    display: block;
+    width: 100%;
+}
+
+button{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    display: grid;
+    place-content: center;
+    background: none;
+    outline: none;
+    border: none;
+    background-color: var(--clr-neon-green);
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 25%);
+}
+
+button:hover {
+    box-shadow: 0 0 40px 0 var(--clr-neon-green);
+}
